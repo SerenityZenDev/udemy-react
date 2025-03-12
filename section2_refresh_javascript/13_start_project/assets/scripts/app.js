@@ -6,7 +6,9 @@
 // console.log(util.apiKey);
 // console.log(content);
 
-let userMessage = "Hello World!!!";
+const userMessage = "Hello World!!!";
+
+// userMessage = "New Value"; // 상수 값 변경 불가
 
 console.log(userMessage);
 console.log(userMessage);
