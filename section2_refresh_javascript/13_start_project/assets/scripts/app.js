@@ -60,20 +60,46 @@
 // console.log(user1);
 // user1.greet();
 
-const hobbies = ["Sports", "Cooking", "Reading"];
-console.log(hobbies[0]);
+// const hobbies = ["Sports", "Cooking", "Reading"];
+// console.log(hobbies[0]);
 
-hobbies.push("Working");
-console.log(hobbies);
+// hobbies.push("Working");
+// console.log(hobbies);
 
-// const index = hobbies.findIndex((item) => {
-//     return item === 'Sports';
-// })
+// // const index = hobbies.findIndex((item) => {
+// //     return item === 'Sports';
+// // })
 
-const index = hobbies.findIndex((item) => item === "Sports"); // 상단과 같은 결과
+// const index = hobbies.findIndex((item) => item === "Sports"); // 상단과 같은 결과
 
-console.log(index); // 0 출력됨
+// console.log(index); // 0 출력됨
 
-// const editedHobbies = hobbies.map((item) => item + "!"); // 기존 배열을 수정하지 않고 새롭게 생성
-const editedHobbies = hobbies.map((item) => ({text: item})); // 객체로 담아서 생성
-console.log(editedHobbies);
+// // const editedHobbies = hobbies.map((item) => item + "!"); // 기존 배열을 수정하지 않고 새롭게 생성
+// const editedHobbies = hobbies.map((item) => ({text: item})); // 객체로 담아서 생성
+// console.log(editedHobbies);
+
+// const userNameData = ["Max", "Schd"];
+
+// const firstName = userNameData[0];
+// const lastName = userNameData[1];
+
+const [firstName, lastName] = ["Max", "Schd"];
+
+console.log(firstName);
+console.log(lastName);
+
+// const user = {
+//     name: "Max",
+//     age: 34
+// }
+
+// const name = user.name;
+// const age = user.age;
+
+const {name: userName, age} = {
+    name: "Max",
+    age: 34
+}
+
+console.log(userName);
+console.log(age);
