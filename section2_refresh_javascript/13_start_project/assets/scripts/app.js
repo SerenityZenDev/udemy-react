@@ -33,29 +33,47 @@
 // }
 
 
-const user = {
-    name: 'Max',
-    age: 34,
-    greet() {
-        console.log("Hello!");
-        console.log(this.age);
-    }
-};
+// const user = {
+//     name: 'Max',
+//     age: 34,
+//     greet() {
+//         console.log("Hello!");
+//         console.log(this.age);
+//     }
+// };
 
-console.log(user);
-user.greet();
+// console.log(user);
+// user.greet();
 
-class User{
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
+// class User{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
 
-    greet(){
-        console.log("Hi!");
-    }
-}
+//     greet(){
+//         console.log("Hi!");
+//     }
+// }
 
-const user1 = new User("Manual", 35);
-console.log(user1);
-user1.greet();
+// const user1 = new User("Manual", 35);
+// console.log(user1);
+// user1.greet();
+
+const hobbies = ["Sports", "Cooking", "Reading"];
+console.log(hobbies[0]);
+
+hobbies.push("Working");
+console.log(hobbies);
+
+// const index = hobbies.findIndex((item) => {
+//     return item === 'Sports';
+// })
+
+const index = hobbies.findIndex((item) => item === "Sports"); // 상단과 같은 결과
+
+console.log(index); // 0 출력됨
+
+// const editedHobbies = hobbies.map((item) => item + "!"); // 기존 배열을 수정하지 않고 새롭게 생성
+const editedHobbies = hobbies.map((item) => ({text: item})); // 객체로 담아서 생성
+console.log(editedHobbies);
