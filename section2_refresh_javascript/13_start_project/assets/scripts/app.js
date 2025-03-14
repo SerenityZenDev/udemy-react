@@ -105,23 +105,39 @@
 // console.log(age);
 
 
+// const hobbies = ["Sports", "Cooking"];
+// const user = {
+//     name: "Max",
+//     age: 34
+// };
+
+// const newHobbies = ["Reading"];
+
+// const mergeHobbies1 = [hobbies, newHobbies];
+// /*
+// array0 hobbies 원소가 들어있음
+// array1 newhobbies 원소가 들어있음
+// */
+// const mergeHobbies2 = [...hobbies, ...newHobbies]; // 하나의 배열에 원소값을 꺼내와서 저장 
+
+// const extendedUser = {
+//     isAdmin: true,
+//     ...user
+// };
+// console.log(extendedUser)
+
+const password = prompt('Your Password');
+
+if(password === "Hello"){
+    console.log("Hello works");
+} else if (password === "hello"){
+    console.log("hello works");
+} else {
+    console.log("Access not granted.");
+}
+
 const hobbies = ["Sports", "Cooking"];
-const user = {
-    name: "Max",
-    age: 34
-};
 
-const newHobbies = ["Reading"];
-
-const mergeHobbies1 = [hobbies, newHobbies];
-/*
-array0 hobbies 원소가 들어있음
-array1 newhobbies 원소가 들어있음
-*/
-const mergeHobbies2 = [...hobbies, ...newHobbies]; // 하나의 배열에 원소값을 꺼내와서 저장 
-
-const extendedUser = {
-    isAdmin: true,
-    ...user
-};
-console.log(extendedUser)
+for(const hobby of hobbies){
+    console.log(hobby);
+}
