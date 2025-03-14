@@ -83,23 +83,45 @@
 // const firstName = userNameData[0];
 // const lastName = userNameData[1];
 
-const [firstName, lastName] = ["Max", "Schd"];
+// const [firstName, lastName] = ["Max", "Schd"];
 
-console.log(firstName);
-console.log(lastName);
+// console.log(firstName);
+// console.log(lastName);
 
-// const user = {
+// // const user = {
+// //     name: "Max",
+// //     age: 34
+// // }
+
+// // const name = user.name;
+// // const age = user.age;
+
+// const {name: userName, age} = {
 //     name: "Max",
 //     age: 34
 // }
 
-// const name = user.name;
-// const age = user.age;
+// console.log(userName);
+// console.log(age);
 
-const {name: userName, age} = {
+
+const hobbies = ["Sports", "Cooking"];
+const user = {
     name: "Max",
     age: 34
-}
+};
 
-console.log(userName);
-console.log(age);
+const newHobbies = ["Reading"];
+
+const mergeHobbies1 = [hobbies, newHobbies];
+/*
+array0 hobbies 원소가 들어있음
+array1 newhobbies 원소가 들어있음
+*/
+const mergeHobbies2 = [...hobbies, ...newHobbies]; // 하나의 배열에 원소값을 꺼내와서 저장 
+
+const extendedUser = {
+    isAdmin: true,
+    ...user
+};
+console.log(extendedUser)
