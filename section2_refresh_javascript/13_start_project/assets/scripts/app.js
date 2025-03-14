@@ -167,12 +167,15 @@
 
 // greeter(() => console.log("Hi"));
 
-function init(){
-    function greet(){
-        console.log('Hi');
-    }
+// function init(){
+//     function greet(){
+//         console.log('Hi');
+//     }
 
-    greet();
-}
+//     greet();
+// }
 
-init();
+// init();
+
+// let userMessage = 'Hello';
+// userMessage = userMessage.concat('!!!');
