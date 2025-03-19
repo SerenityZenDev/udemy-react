@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 import { CORE_CONCEPTS } from './data';
 import Header from './components/Header/Header.jsx';
@@ -29,9 +29,11 @@ function App() {
           </div>
     )
   }
-
+  // return문 내부에 들어오는 값을 div 로 묶어줘야 함
+  // div가 불필요하게 생기는게 싫다면 fragment를 사용
+  // 다만 최신버전에서는 <> </> 로 대체 가능
   return (
-    <div>
+    <>
       <Header/>
       <main>
         <section id='core-concepts'>
@@ -54,7 +56,7 @@ function App() {
         {tabContent}
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
