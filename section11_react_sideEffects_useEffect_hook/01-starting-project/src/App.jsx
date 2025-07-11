@@ -10,13 +10,16 @@ import { sortPlacesByDistance } from './loc.js'
 function App() {
   const modal = useRef();
   const selectedPlace = useRef();
+  const [availablePlaces, setAvaliablePlaces] = useState([]);
   const [pickedPlaces, setPickedPlaces] = useState([]);
 
   navigator.geolocation.getCurrentPosition((position) => {
     const sortedPlaces = sortPlacesByDistance(
       AVAILABLE_PLACES,
       position.coords.latitude,
-      position.coords.longitude)
+      position.coords.longitude);
+    
+    setAvaliablePlaces(sortedPlaces);
   });
 
   function handleStartRemovePlace(id) {
@@ -71,7 +74,7 @@ function App() {
         />
         <Places
           title="Available Places"
-          places={AVAILABLE_PLACES}
+          places={availablePlaces}
           onSelectPlace={handleSelectPlace}
         />
       </main>
